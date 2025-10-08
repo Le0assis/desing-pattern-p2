@@ -1,0 +1,12 @@
+{
+    "name": "leonardo/solid-srp-final",
+    "description": "SRP em PHP puro",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Leonardo\\SolidSrpFinal\\": "src/"
+        }
+    },
+    "require": {}
+}
