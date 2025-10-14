@@ -72,7 +72,7 @@ Caso 5 — List com itens
 Condição:
 3 produtos já cadastrados
 Saída esperada:
-'''
+'''php
 {"id":1,"name":"teste","price":10}
 {"id":2,"name":"teste","price":10}
 {"id":3,"name":"teste","price":10}
