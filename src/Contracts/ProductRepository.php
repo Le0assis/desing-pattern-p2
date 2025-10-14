@@ -9,9 +9,11 @@ use App\Domain\Product;
 interface ProductRepository
 {
     /**
-     * @param 
+     * @param class{Product product} 
      */
     public function save(Product $product): void;
+
     public function getAll();
+    
     public function getId(): int;
 }

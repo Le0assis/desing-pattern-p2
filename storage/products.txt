@@ -1,1 +1,2 @@
 {"id":1,"name":"Teclado","price":120.5}
+{"id":2,"name":"teste","price":30}

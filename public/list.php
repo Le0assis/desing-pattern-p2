@@ -1,10 +1,10 @@
 <?php
+
 declare(strict_types=1);
 
 require __DIR__ . '/../vendor/autoload.php';
 
 use App\Infra\FileProductRepository;
-
 
 $file = __DIR__ . '/../storage/products.txt';
 $repo = new FileProductRepository($file);
@@ -17,6 +17,7 @@ if (file_exists($file)) {
         $products[] = json_decode($line, true);
     }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -56,8 +57,7 @@ if (file_exists($file)) {
         .message {
             font-size: 1.1rem;
             color:
-                <?= $color ?>
-            ;
+                <?= $color ?>;
             margin-bottom: 1rem;
         }
 
@@ -108,7 +108,6 @@ if (file_exists($file)) {
                 Nenhum produto encontrado. Cadastre um novo produto!
             </p>
         <?php endif; ?>
-
         <br>
         <a href="index.php">Voltar</a>
 </body>

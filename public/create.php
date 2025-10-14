@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 require __DIR__ . '/../vendor/autoload.php';
@@ -30,10 +31,8 @@ if ($result['success']) {
     $errors = $result['errors'];
     $message = implode('<br>', $errors);
     $color = 'red';
-
 }
 ?>
-
 
 <!DOCTYPE html>
 </body>
@@ -67,8 +66,7 @@ if ($result['success']) {
         .message {
             font-size: 1.1rem;
             color:
-                <?= $color ?>
-            ;
+                <?= $color ?>;
             margin-bottom: 1rem;
         }
 

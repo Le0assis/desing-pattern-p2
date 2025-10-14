@@ -6,8 +6,12 @@ namespace App\Domain;
 
 use App\Contracts\ProductValidator;
 use App\Domain\Product;
+
 final class SimpleProductValidator implements ProductValidator
 {
+    /**
+     * @param string $name
+     */
     public function validateName($name): array
     {
         $errors = [];
@@ -21,6 +25,9 @@ final class SimpleProductValidator implements ProductValidator
         return $errors;
     }
 
+    /**
+     * @param float $price
+     */
     public function validatePrice(float $price): array
     {
         $errors = [];
@@ -31,6 +38,9 @@ final class SimpleProductValidator implements ProductValidator
         return $errors;
     }
 
+    /**
+     * @param Product $product
+     */
     public function validateItem(Product $product): array
     {
         $errors = [];
@@ -39,4 +49,5 @@ final class SimpleProductValidator implements ProductValidator
 
         return $errors;
     }
+    
 }

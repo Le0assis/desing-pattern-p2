@@ -5,10 +5,14 @@ namespace App\Domain;
 class Product
 {
     public int $id;
-
     public string $name;
     public float $price;
 
+    /**
+     * @param int $id
+     * @param string $name
+     * @param float $price
+     */
     public function __construct(int $id, string $name, float $price)
     {
         $this->id = $id;
@@ -24,6 +28,4 @@ class Product
             'price' => $this->price,
         ];
     }
-
-    
 }

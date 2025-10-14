@@ -8,9 +8,11 @@ use App\Domain\Product;
 
 final class FileProductRepository implements ProductRepository
 {
+    /**
+     * @param string $filePath
+     */
     public function __construct(private string $filePath)
     {
-
         $dir = dirname($this->filePath);
         if (!is_dir($dir)) {
             mkdir($dir, 0777, true);
@@ -19,6 +21,7 @@ final class FileProductRepository implements ProductRepository
             touch($this->filePath);
         }
     }
+
     public function getAll(): array
     {
         $products = [];
@@ -32,6 +35,7 @@ final class FileProductRepository implements ProductRepository
 
         return $products;
     }
+
     public function getId(): int
     {
         
@@ -45,16 +49,15 @@ final class FileProductRepository implements ProductRepository
         return ($last['id'] ?? 0) + 1;
     }
 
-    /** @param */
+    /** 
+     * @param Product $product
+    */
     public function save(Product $product): void
     {
-
         $data = $product->toArray();
         file_put_contents($this->filePath, json_encode(
             $data,
             JSON_UNESCAPED_UNICODE
         ) . PHP_EOL, FILE_APPEND);
-
-
     }
 }
