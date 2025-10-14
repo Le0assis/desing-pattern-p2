@@ -40,8 +40,8 @@ Código HTTP 201
 Mensagem: Produto cadastrado com sucesso
 Produto visível na listagem (list.php)
 
-'''php
-\\{"id":1,"name":"Teclado","price":120.5}
+'''JSON
+>{"id":1,"name":"Teclado","price":120.5}
 '''
 
 Caso 2 — Create inválido (nome curto)
