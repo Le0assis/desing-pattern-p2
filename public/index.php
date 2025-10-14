@@ -21,6 +21,10 @@ require __DIR__ . '/../vendor/autoload.php';
             display: block;
             margin: .5rem 0
         }
+
+        button {
+            background-color: blue;
+        }
     </style>
 </head>
 
@@ -30,3 +34,7 @@ require __DIR__ . '/../vendor/autoload.php';
         <label>Nome <input name="name" required></label>
         <label>Preço <input name="price" type="price" required></label>
         <button type="submit">Cadastrar</button>
+    </form>
+    <form action="list.php" method="get">
+        <button type="submit">Listar Produtos</button>
+    </form>

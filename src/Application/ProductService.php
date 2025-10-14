@@ -25,12 +25,18 @@ final class ProductService
         $product = new Product($id,$name, $price);
         $errors = $this->validator->validateItem($product);
 
-        if ($errors != []) {
-            return false;
+        if (!empty($errors)) {
+        return [
+            'success' => false,
+            'errors' => $errors
+        ];
         }
 
         $this->repo->save($product);
-        return true;
-    }
+        return [
+            'success' => true,
+            'message' => 'Produto cadastrado com sucesso'
+        ];
+        }
     
 }

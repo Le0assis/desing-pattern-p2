@@ -1,6 +1,1 @@
-{"id":1,"name":"teste","price":0}
-{"id":2,"name":"teste","price":1}
-{"id":3,"name":"teste","price":2}
-{"id":4,"name":"teste","price":3}
-{"id":5,"name":"teste","price":4}
-{"id":6,"name":"teste","price":5}
+{"id":1,"name":"Teclado","price":120.5}
