@@ -1,0 +1,1 @@
+{"name":"João","email":"joao@unimar.br","password":"$2y$10$EeujeWMsdqxHZyz1KyoQmexVn6\/X97aEPy9eMDO10gXRUvzdrKXtm"}

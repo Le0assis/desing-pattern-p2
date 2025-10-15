@@ -1,79 +1,61 @@
-Products SRP Demo
+Aluno: Jhonatan Cesar Alves da Silva
+RA: 2010656
 
-Projeto simples em PHP demonstrando o uso do Princípio da Responsabilidade Única (SRP).
-O sistema permite cadastrar e listar produtos, com validação e persistência em arquivo.
+Cadastro e Listagem de Usuários — SRP Demo
+Este projeto é um exemplo prático em PHP baseado no Princípio da Responsabilidade Única (SRP) do SOLID.
+O objetivo é demonstrar uma aplicação web simples, porém organizada, que permite cadastrar e listar usuários, utilizando boas práticas de separação de camadas, validação e interface moderna.
 
-Como executar
-# 1. Clone o projeto
+Funcionalidades
+Cadastro de novos usuários com validação de nome, e-mail e senha.
+
+Impede cadastros duplicados pelo mesmo e-mail.
+
+Exibição centralizada e estilizada dos usuários cadastrados.
+
+Interface amigável feita com HTML5 e CSS3 responsivo.
+
+Botões para navegação entre cadastro e listagem, sempre visíveis e acessíveis.
+
+Organização do Código
+Camada de Aplicação: Regras de negócio e controle geral.
+
+Domínio: Interfaces e validação das regras.
+
+Infraestrutura: Persistência de dados em arquivo texto.
+
+Views: HTML limpo separado da lógica e CSS padronizado.
+
+Como Executar
+Clone o repositório:
+
+text
 git clone https://github.com/Le0assis/desing-pattern-p2
+Entre na pasta e instale as dependências:
 
-# 2. Acesse a pasta
-cd products-srp-demo
-
-# 3. Instale as dependências
+text
+cd desing-pattern-p2
 composer install
+Suba o servidor local:
 
-# 4. Inicie o servidor local
-
+text
+php -S localhost:8000 -t public
 Acesse no navegador:
 
-http://localhost/products-srp-demo/public/index.php
+text
+http://localhost:8000/index.php
+Exemplo de Uso
+Preencha o formulário de cadastro na tela inicial.
 
+Clique em “Listar usuários” para visualizar a tabela dos cadastrados.
 
+Utilize os botões de navegação para retornar ao menu ou ver os cadastrados a qualquer instante.
 
-Casos de Teste Manuais
-Caso	Entrada	Resultado Esperado
-1. Cadastro válido	name="Teclado", price=120.50	✔ Produto criado e aparece na listagem
-2. Nome curto	name="T", price=50	❌ Rejeitado — nome com menos de 2 caracteres
-3. Preço negativo	name="Mouse", price=-10	❌ Rejeitado — preço inválido
-4. Lista vazia	Arquivo vazio	“Nenhum produto cadastrado”
-5. Múltiplos cadastros	3 produtos criados	IDs incrementais e listagem na ordem correta
+Estrutura da Interface
+Projeto com estilização moderna e responsiva.
 
-Testes:
+Cards centralizados para formulários, avisos e tabelas.
 
-Caso 1 — Create válido
+Feedback visual para sucesso e erro nos cadastros.
 
-Entrada:
-name=Teclado, price=120.50
-Saída esperada:
-Código HTTP 201
-Mensagem: Produto cadastrado com sucesso
-Produto visível na listagem (list.php)
-
-'''JSON
->{"id":1,"name":"Teclado","price":120.5}
-'''
-
-Caso 2 — Create inválido (nome curto)
-
-Entrada:
-name=T, price=50
-Saída esperada:
-Código HTTP 422
-Mensagem: Falha na validação
-
-Caso 3 — Create inválido (preço negativo)
-
-Entrada:
-name=Mouse, price=-10
-Saída esperada:
-Código HTTP 422
-Mensagem: Falha na validação
-
-Caso 4 — List vazio
-
-Condição:
-Arquivo products.txt está vazio
-Saída esperada:
-Texto exibido: Nenhum produto cadastrado
-
-Caso 5 — List com itens
-
-Condição:
-3 produtos já cadastrados
-Saída esperada:
-'''JSON
->{"id":1,"name":"teste","price":10}
->{"id":2,"name":"teste","price":10}
->{"id":3,"name":"teste","price":10}
-'''
+Licença
+Este projeto é livre para fins didáticos e acadêmicos.
